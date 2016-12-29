@@ -1,0 +1,31 @@
+{% extends "home_base.html" %}
+{% block content %}
+    <div class="post-list">
+        {% for post in post_list %}
+
+            <div id="post1" class="post">
+                <h2 class="post-title">
+                    <a href="post1.html">{{ post.title }}</a>
+                </h2>
+                <p class="post-text">
+                    {{ post.content | truncatewords:"50"}}
+                </p>
+                <div class="post-info">
+                    <i class="glyphicon glyphicon-time"></i>
+                    <p>Time:</p>
+                    <p>{{ post.date_time | date:"Y· M j"}}</p>
+                    <p>·</p>
+                    <i class="glyphicon glyphicon-tags"></i>
+                    <p>Category: </p>
+                    <a href="catagory-p.html">{{ post.category|upper }}</a>
+                </div>
+                <div class="read-more">
+                    <a href="more.html">
+                        <div>Read More</div>
+                    </a>
+                </div>
+            </div>
+
+        {% endfor %}
+    </div>
+{% endblock %}
