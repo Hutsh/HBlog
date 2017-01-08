@@ -1,0 +1,146 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Huts's Blog</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="/static/css/theme.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/hue.css" />
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+    <script src="/static/js/jquery.jpanelmenu.js"></script>
+</head>
+<body>
+<div class="container-panel"><!--整个页面-->
+    <header class="post-header">
+
+        <div class="menu-trigger">
+            <i class="iconfont trigger-icon">&#xe602;</i>
+        </div>
+    </header>
+    <main class="post-content-warp">
+        <div class="post-info">
+            <i class="glyphicon glyphicon-time"></i>
+            <p>Time:</p>
+            <p>{{ post.date_time|date:"Y· M j"}}</p>
+            <p>·</p>
+            <i class="glyphicon glyphicon-tags"></i>
+            <p>Category: </p>
+            <a href="catagory-p.html">{{ post.category }}</a>
+        </div>
+
+        <h1 class="post-title"><a href="{% url "detail" id=post.id %}">{{ post.title }}</a></h1>
+
+        <p class="post-detail">
+			{{ post.content }}
+        </p>
+
+    </main>
+
+    <footer class="post-footer">
+        <div class="post-footer-info">
+            <div class="row">
+                <div class="col-xs-12 col-sm-2">
+                    <img src="/static/img/avatar.jpg" class="user-icon " alt="user-image">
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <div class="category-list">
+                        <p>Published <span>{{ post.date_time|date:" j M, Y"}}</span></p>
+                        <p><a href="#">Hutsh</a> in <a href="#">{{ post.category }}</a></p>
+
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="social">
+                        <p>Share this article
+                        </p><div class="social-links">
+                        <a class="social-icon" href="#" data-platform="twitter" data-message="Message about this post" data-url="http://writertheme.com/post"><i class="iconfont">&#xe634;</i></a>
+
+                        <a class="social-icon" href="#" data-platform="facebook" data-message="Message about this post" data-url="http://writertheme.com/post"><i class="iconfont">&#xe620;</i></a>
+
+                        <a class="social-icon" data-platform="mail" href="mailto:hutsh@live.com"><i class="iconfont mailicon">&#xe689;</i></a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-jump">
+
+
+        </div>
+
+    </footer>
+
+
+
+</div>
+
+<div id="side-menu" class="left-menu">
+    <div class="avatar">
+    </div>
+    <ul class="side-menu-list">
+        <li>
+            <i class="iconfont">&#xe610;</i>
+            <a href="http://huts.win">Home</a>
+        </li>
+        <li>
+            <i class="iconfont">&#xe655;</i>
+            <a href="http://blog.huts.win/archive">Archives</a>
+        </li>
+        <li>
+            <i class="iconfont">&#xe600;</i>
+            <a href="http://blog.huts.win/contact">Contact</a>
+        </li>
+        <li>
+            <i class="iconfont">&#xe62a;</i>
+            <a href="http://gallery.huts.win">Gallery</a>
+        </li>
+        <li>
+            <i class="iconfont">&#xe61f;</i>
+            <a href="http://blog.huts.win/about">About</a>
+        </li>
+    </ul>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var jPM = $.jPanelMenu({
+            menu: '#side-menu',
+            duration: 500,
+            easing: 'ease'
+        });
+        jPM.on();
+    });
+    $(document).ready(function () {
+        $("#search-btn").click(function () {
+            btn = $("#search-btn");
+            btna = $("#btn-active")
+            si = $("#si");
+            sia = $("#si-active")
+            btn.addClass("search-button-press");
+            btn.attr('id', 'btn-active');
+            si.addClass("search-input-active");
+            si.focus();
+            si.attr('id', 'si-active');
+
+            btna.removeClass("search-button-press");
+            btna.attr('id', 'search-btn');
+            sia.removeClass("search-input-active");
+            sia.attr('id', 'si');
+
+        })
+    })
+</script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/static/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -5,7 +5,7 @@
 
             <div id="post1" class="post">
                 <h2 class="post-title">
-                    <a href="post1.html">{{ post.title }}</a>
+                    <a href="{% url "detail" id=post.id %}">{{ post.title }}</a>
                 </h2>
                 <p class="post-text">
                     {{ post.content | truncatewords:"50"}}
@@ -20,7 +20,7 @@
                     <a href="catagory-p.html">{{ post.category|upper }}</a>
                 </div>
                 <div class="read-more">
-                    <a href="more.html">
+                    <a href="{% url "detail" id=post.id %}">
                         <div>Read More</div>
                     </a>
                 </div>

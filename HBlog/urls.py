@@ -16,11 +16,11 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from article import views as article_views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', article_views.home, name='article_view'),
-    url(r'^(?P<my_args>\d+)/$', article_views.detail, name='detail'),
-    url(r'^$', article_views.home),
-
-]
+    url(r'^$', article_views.home, name='home'),
+    url(r'^(?P<id>\d+)/$', article_views.detail, name='detail'),
+] + static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
