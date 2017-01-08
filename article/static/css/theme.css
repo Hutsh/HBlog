@@ -286,7 +286,6 @@ h2 {
     }
 
     .left-bar {
-        margin-top: 10px;
         padding-left: 0px;
         height: 100%;
     }
@@ -552,4 +551,35 @@ footer.post-footer a {
     border: 3px;
 }
 
-
+/*下面是archive样式*/
+.archive-wraper{
+    margin: 30px auto;
+    width: 80%;
+}
+.archive-post{
+    width: 100%;
+    padding: 0 0 30px 0;
+}
+.archive-title{
+    float: left;
+    width: 70%;
+    height: 100%;
+}
+.archive-title a{
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 18px;
+    color: #333337;
+    text-decoration: none;
+}
+.archive-title a:hover{
+    text-decoration: none;
+    color: #999999;
+}
+.archive-info{
+    font-size: 17px;
+    width: 30%;
+    padding-right: 25px;
+    float: left;
+    overflow:hidden;
+    display:block;
+}

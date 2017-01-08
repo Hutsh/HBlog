@@ -1,6 +1,19 @@
 {% extends "home_base.html" %}
 {% load custom_markdown %}
 {% block content %}
+
+    <div class="sub-nav">
+        <a href="{% url "home" %}" class="nav-active">Home</a>
+        <a href="{% url "archives" %}" class="nav-inactive">Archives</a>
+        <a href="#" class="nav-inactive">About</a>
+        <div class="nav-search">
+            <div id="search-btn" class="search-button">
+                <i class="iconfont">&#xe627;</i>
+            </div>
+            <input id="si" type="text" class="search-input" placeholder="Type to search"/>
+        </div>
+    </div>
+
     <div class="post-list">
         {% for post in post_list %}
 
