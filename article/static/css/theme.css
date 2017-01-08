@@ -537,3 +537,10 @@ footer.post-footer a {
 .mailicon{
     margin-top: 5px;
 }
+
+/*下面是多说评论样式*/
+.post-comment-wrap{
+    padding-top: 20px;
+    border: 3px;
+}
+

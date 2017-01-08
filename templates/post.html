@@ -18,6 +18,8 @@
     <![endif]-->
     <script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
     <script src="/static/js/jquery.jpanelmenu.js"></script>
+
+
 </head>
 <body>
 <div class="container-panel"><!--整个页面-->
@@ -43,6 +45,12 @@
         <p class="post-detail">
 			{{ post.content }}
         </p>
+
+        <hr>
+
+        <div class="post-comment-wrap">
+            {% include "comment.html" %}
+        </div>
 
     </main>
 
@@ -74,8 +82,6 @@
             </div>
         </div>
         <div class="footer-jump">
-
-
         </div>
 
     </footer>
