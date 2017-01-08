@@ -1,4 +1,5 @@
 {% extends "home_base.html" %}
+{% load custom_markdown %}
 {% block content %}
     <div class="post-list">
         {% for post in post_list %}
@@ -7,9 +8,9 @@
                 <h2 class="post-title">
                     <a href="{% url "detail" id=post.id %}">{{ post.title }}</a>
                 </h2>
-                <p class="post-text">
-                    {{ post.content | truncatewords:"50"}}
-                </p>
+                <div class="post-text">
+                    {{ post.content | custom_markdown  | truncatewords:"50"}}
+                </div>
                 <div class="post-info">
                     <i class="glyphicon glyphicon-time"></i>
                     <p>Time:</p>

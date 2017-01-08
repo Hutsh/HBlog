@@ -23,7 +23,7 @@ h2 {
 
 .left-bar {
     padding-left: 0px;
-    background-image: url("http://ww3.sinaimg.cn/large/6a4d4d47jw1fbey94rrscj214u1pgdqu.jpg");
+    background-image: url("https://unsplash.it/1400/1400?random");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
@@ -196,6 +196,7 @@ h2 {
 .read-more div {
     margin: 0px auto;
     width: 120px;
+    height: 30px;
     border: solid 1px #a1a1a1;
     color: #a1a1a1;
     font-size: 20px;
@@ -208,7 +209,9 @@ h2 {
     border: solid 1px #3a3a3a;
     color: #3a3a3a;
     width: 200px;
-    letter-spacing: 7px;
+    letter-spacing: 2px;
+    font-size: 23px;
+    height: 35px;
 }
 
 .read-more a:hover {
@@ -465,7 +468,7 @@ h2 {
 /*下面是post的css*/
 .post-header{
     height: 460px;
-    background-image: url("../img/default-single-hero.jpg");
+    background-image: url("https://unsplash.it/1500/1000?random");
     background-position: center;
 }
 
@@ -479,7 +482,13 @@ h2 {
 }
 .post-detail{
     padding-top: 30px;
-    font-size: 2.3rem;
+    font-size: 18px;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+.post-detail a{
+    padding-top: 30px;
+    font-size: 18px;
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
@@ -543,4 +552,5 @@ footer.post-footer a {
     padding-top: 20px;
     border: 3px;
 }
+
 
