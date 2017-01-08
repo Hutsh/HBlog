@@ -15,8 +15,6 @@ h2 {
 }
 
 .container-panel {
-    margin-left: -3px;
-    margin-top: -10px;
     padding: 0;
     /*box-shadow: #000 2px 2px 10px;*/
 }
@@ -470,6 +468,7 @@ h2 {
     height: 460px;
     background-image: url("https://unsplash.it/1500/1000?random");
     background-position: center;
+    background-size: cover;
 }
 
 .post-content-warp {
