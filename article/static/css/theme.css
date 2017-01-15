@@ -26,6 +26,9 @@ h2 {
     background-size: cover;
     height: 100%;
     transition: all 450ms;
+    -webkit-box-shadow: -8px 0px 10px 0px rgba(34,34,36,0.75);
+    -moz-box-shadow: -8px 0px 10px 0px rgba(34,34,36,0.75);
+    box-shadow: -8px 0px 10px 0px rgba(34,34,36,0.75);
 }
 
 .site-info {
@@ -219,9 +222,11 @@ h2 {
 .left-menu {
     background-color: #333337;
     display: none;
+    /*
     -webkit-box-shadow: inset -15px 0px 16px -12px #000000;
     -moz-box-shadow: inset -15px 0px 16px -12px #000000;
     box-shadow: inset -15px 0px 16px -12px #000000;
+    */
 }
 
 .fadeIn {
@@ -429,7 +434,7 @@ h2 {
 }
 
 .search-input-active {
-    width: 130px;
+    width: 160px;
     transition: 0.5s;
     border-bottom: 2px solid #333;
 }

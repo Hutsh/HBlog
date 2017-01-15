@@ -7,12 +7,12 @@
         <a href="{% url "home" %}" class="nav-active">Home</a>
         <a href="{% url "archives" %}" class="nav-inactive">Archives</a>
         <a href="#" class="nav-inactive">About</a>
-        <div class="nav-search">
+        <form class="nav-search" id="sform" action="/search/" method="get">
             <div id="search-btn" class="search-button">
                 <i class="iconfont">&#xe627;</i>
             </div>
-            <input id="si" type="text" class="search-input" placeholder="Type to search"/>
-        </div>
+            <input id="si" type="text" name="s" class="search-input" placeholder="Press Enter to search"/>
+        </form>
     </div>
 
     <div class="post-list">

@@ -109,25 +109,48 @@
         });
         jPM.on();
     });
-    $(document).ready(function () {
-        $("#search-btn").click(function () {
-            btn=$("#search-btn");
-            btna=$("#btn-active")
-            si=$("#si");
-            sia=$("#si-active")
+    $(document).mouseup(function(e){
+        var _con = $("#sform");
+        btn=$("#search-btn");
+        btna=$("#btn-active");
+        si=$("#si");
+        sia=$("#si-active");
+        if (!_con.is(e.target) && _con.has(e.target).length === 0){
+            btna.removeClass("search-button-press");
+            btna.attr('id','search-btn');
+            sia.removeClass("search-input-active");
+            sia.attr('id','si');
+        }
+        else {
             btn.addClass("search-button-press");
             btn.attr('id','btn-active');
             si.addClass("search-input-active");
             si.focus();
+            si.val("");
+            si.attr('id','si-active');
+        }
+    });
+    /*
+    $(document).ready(function () {
+        $("#search-btn").click(function () {
+            btn=$("#search-btn");
+            btna=$("#btn-active");
+            si=$("#si");
+            sia=$("#si-active");
+            btn.addClass("search-button-press");
+            btn.attr('id','btn-active');
+            si.addClass("search-input-active");
+            si.focus();
+            si.val("");
             si.attr('id','si-active');
 
             btna.removeClass("search-button-press");
             btna.attr('id','search-btn');
             sia.removeClass("search-input-active");
             sia.attr('id','si');
-
         })
     })
+    */
 </script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <!-- <script src="js/bootstrap.min.js"></script> -->
