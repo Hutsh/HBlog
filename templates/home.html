@@ -1,5 +1,6 @@
 {% extends "home_base.html" %}
 {% load custom_markdown %}
+{% load custom_md_truncate %}
 {% block content %}
 
     <div class="sub-nav">
@@ -22,7 +23,7 @@
                     <a href="{% url "detail" id=post.id %}">{{ post.title }}</a>
                 </h2>
                 <div class="post-text">
-                    {{ post.content | custom_markdown  | truncatewords:"50"}}
+                        {{ post.content | custom_md_truncate:"800" }}
                 </div>
                 <div class="post-info">
                     <i class="glyphicon glyphicon-time"></i>

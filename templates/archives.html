@@ -3,8 +3,8 @@
 {% block content %}
 
     <div class="sub-nav">
-        <a href="#" class="nav-inactive">Home</a>
-        <a href="#" class="nav-active">Archives</a>
+        <a href="{% url "home" %}" class="nav-inactive">Home</a>
+        <a href="{% url "archives" %}" class="nav-active">Archives</a>
         <a href="#" class="nav-inactive">About</a>
         <div class="nav-search">
             <div id="search-btn" class="search-button">
