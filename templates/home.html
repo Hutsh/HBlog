@@ -20,7 +20,7 @@
 
             <div id="post1" class="post">
                 <h2 class="post-title">
-                    <a href="{% url "detail" id=post.id %}">{{ post.title }}</a>
+                    <a href="{% url "detail_slug" slug=post.slug %}">{{ post.title }}</a>
                 </h2>
                 <div class="post-text">
                         {{ post.content | custom_md_truncate:"800" }}
@@ -35,7 +35,7 @@
                     <a href="catagory-p.html">{{ post.category|upper }}</a>
                 </div>
                 <div class="read-more">
-                    <a href="{% url "detail" id=post.id %}">
+                    <a href="{% url "detail_slug" slug=post.slug %}">
                         <div>Read More</div>
                     </a>
                 </div>

@@ -17,9 +17,11 @@ h2 {
 .container-panel {
     padding: 0;
     /*box-shadow: #000 2px 2px 10px;*/
+    /*
     -webkit-box-shadow: -8px 0px 10px 0px rgba(34,34,36,0.75);
     -moz-box-shadow: -8px 0px 10px 0px rgba(34,34,36,0.75);
     box-shadow: -8px 0px 10px 0px rgba(34,34,36,0.75);
+    */
 }
 
 .left-bar {
@@ -146,6 +148,21 @@ h2 {
     font-size: 1.8rem;
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
+.post-text a{
+    padding-top: 30px;
+    font-size: 18px;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+.post-text h4{
+    padding-top: 10px;
+    font-size: 23px;
+}
+
+.post-text h5{
+    padding-top: 10px;
+    font-size: 22px;
+}
 
 .post-title a {
     text-decoration: none;
@@ -225,11 +242,9 @@ h2 {
 .left-menu {
     background-color: #333337;
     display: none;
-    /*
     -webkit-box-shadow: inset -15px 0px 16px -12px #000000;
     -moz-box-shadow: inset -15px 0px 16px -12px #000000;
     box-shadow: inset -15px 0px 16px -12px #000000;
-    */
 }
 
 .fadeIn {
@@ -496,6 +511,21 @@ h2 {
     padding-top: 30px;
     font-size: 18px;
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+.post-detail h4{
+    padding-top: 10px;
+    font-size: 23px;
+}
+
+.post-detail h5{
+    padding-top: 10px;
+    font-size: 22px;
+}
+.post-detail h6{
+    padding-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 /*下面是footer*/
