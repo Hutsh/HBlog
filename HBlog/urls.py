@@ -24,6 +24,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', article_views.home, name='home'),
     url(r'^(?P<id>\d+)/$', article_views.detail, name='detail'),
-    url(r'^archives/$', article_views.archives, name='archives'),
+    url(r'^archive/$', article_views.archive, name='archive'),
     url(r'^search/$',article_views.blog_search, name='search'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

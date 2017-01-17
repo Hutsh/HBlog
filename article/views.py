@@ -20,12 +20,12 @@ def detail(request, id):
     return render(request, 'post.html', {'post': post})
 
 
-def archives(request):
+def archive(request):
     try:
         post_list = Article.objects.all()
     except Article.DoesNotExist:
         raise Http404
-    return render(request, 'archives.html', {'post_list': post_list,
+    return render(request, 'archive.html', {'post_list': post_list,
                                              'error': False})
 
 
@@ -43,3 +43,5 @@ def blog_search(request):
                 return render(request, 'archives.html', {'post_list': post_list,
                                                          'error': False})
     return redirect('/')
+
+
