@@ -19,7 +19,7 @@ class Article(models.Model):
         ('B', 'Blog'),
         ('P', 'Project'),
     )
-    post_type = models.CharField(max_length=2,choices=TYPE_CHOICES,default='B')
+    post_type = models.CharField(max_length=2, choices=TYPE_CHOICES,default='B')
 
     def __str__(self):
         return self.title

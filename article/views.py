@@ -47,7 +47,7 @@ def blog_search(request):
             if len(post_list) == 0:
                 return render(request, 'archives.html', {'post_list': post_list,
                                                          'error': True})
-            else :
+            else:
                 return render(request, 'archives.html', {'post_list': post_list,
                                                          'error': False})
     return redirect('/')
@@ -59,3 +59,11 @@ def about(request):
     except Article.DoesNotExist:
         raise Http404
     return render(request, 'about.html', {'post_about': post_about})
+
+
+def search_tag(request, tag):
+    post_list = Article.objects.filter(category__iexact=tag)  # contains
+    if len(post_list) == 0:
+        return render(request, 'tag.html', {'post_list': post_list, 'error': True})
+    else:
+        return render(request, 'tag.html', {'post_list': post_list, 'error': False, 'search_tag': tag})

@@ -39,7 +39,7 @@
             <p>·</p>
             <i class="glyphicon glyphicon-tags"></i>
             <p>Category: </p>
-            <a href="catagory-p.html">{{ post.category }}</a>
+            <a href="{% url "search_tag" tag=post.category %}">{{ post.category }}</a>
         </div>
 
         <h1 class="post-title"><a href="{% url "detail_slug" slug=post.slug %}">{{ post.title }}</a></h1>

@@ -27,5 +27,6 @@ urlpatterns = [
     url(r'^archives/$', article_views.archives, name='archives'),
     url(r'^search/$',article_views.blog_search, name='search'),
     url(r'^about/$', article_views.about, name='about'),
+    url(r'^tag-(?P<tag>\w+)/$', article_views.search_tag, name='search_tag'),
     url(r'^(?P<slug>[-\w\d]+)/$', article_views.detail_slug, {}, name="detail_slug"),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
