@@ -8,8 +8,15 @@ from django.http import Http404
 
 
 def home(request):
-    post_list = Article.objects.all()  # 获取全部的Article对象
+    post_list = Article.objects.filter(post_type__in=['A', 'V', 'I', 'S', 'B'])  # 显示这些类型的post
+    # post_list = Article.objects.all()  # 获取全部的Article对象
     return render(request, 'home.html', {'post_list': post_list})
+
+
+def proj_home(request):
+    post_list = Article.objects.filter(post_type__in=['P'])  # 显示这些类型的post
+    # post_list = Article.objects.all()  # 获取全部的Article对象
+    return render(request, 'proj.html', {'post_list': post_list})
 
 
 def detail(request, id):
@@ -67,3 +74,4 @@ def search_tag(request, tag):
         return render(request, 'tag.html', {'post_list': post_list, 'error': True})
     else:
         return render(request, 'tag.html', {'post_list': post_list, 'error': False, 'search_tag': tag})
+

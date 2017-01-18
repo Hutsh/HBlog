@@ -18,6 +18,7 @@ class Article(models.Model):
         ('S', 'Status'),
         ('B', 'Blog'),
         ('P', 'Project'),
+        ('M', 'Admin')
     )
     post_type = models.CharField(max_length=2, choices=TYPE_CHOICES,default='B')
 

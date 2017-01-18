@@ -1,0 +1,47 @@
+{% extends "home_base.html" %}
+{% load custom_markdown %}
+{% load custom_md_truncate %}
+{% block content %}
+
+    <div class="sub-nav">
+        <a href="{% url "home" %}" class="nav-inactive">Home</a>
+        <a href="{% url "archives" %}" class="nav-inactive">Archives</a>
+        <a href="{% url "about" %}" class="nav-inactive">About</a>
+        <a href="{% url "proj" %}" class="nav-active">Projects</a>
+        <form class="nav-search" id="sform" action="/search/" method="get">
+            <div id="search-btn" class="search-button">
+                <i class="iconfont">&#xe627;</i>
+            </div>
+            <input id="si" type="text" name="s" class="search-input" placeholder="Press Enter to search"/>
+        </form>
+    </div>
+
+    <div class="post-list">
+        {% for post in post_list %}
+
+            <div id="post1" class="post">
+                <h2 class="post-title">
+                    <a href="{% url "detail_slug" slug=post.slug %}">{{ post.title }}</a>
+                </h2>
+                <div class="post-text">
+                        {{ post.content | custom_md_truncate:"800" }}
+                </div>
+                <div class="post-info">
+                    <i class="glyphicon glyphicon-time"></i>
+                    <p>Time:</p>
+                    <p>{{ post.date_time | date:"Y· M j"}}</p>
+                    <p>·</p>
+                    <i class="glyphicon glyphicon-tags"></i>
+                    <p>Category: </p>
+                    <a href="{% url "search_tag" tag=post.category %}">{{ post.category|upper }}</a>
+                </div>
+                <div class="read-more">
+                    <a href="{% url "detail_slug" slug=post.slug %}">
+                        <div>Read More</div>
+                    </a>
+                </div>
+            </div>
+
+        {% endfor %}
+    </div>
+{% endblock %}
