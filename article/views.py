@@ -53,3 +53,9 @@ def blog_search(request):
     return redirect('/')
 
 
+def about(request):
+    try:
+        post_about = Article.objects.get(slug='about')
+    except Article.DoesNotExist:
+        raise Http404
+    return render(request, 'about.html', {'post_about': post_about})

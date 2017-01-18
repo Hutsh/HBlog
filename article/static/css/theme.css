@@ -26,7 +26,7 @@ h2 {
 
 .left-bar {
     padding-left: 0px;
-    background-image: url("https://unsplash.it/1400/1400?random");
+    background-image: url("https://unsplash.it/900/1200?random");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
@@ -143,23 +143,23 @@ h2 {
     display: inline;
 }
 
-.post-text {
+.post-list {
     padding-left: 20px;
     font-size: 1.8rem;
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
-.post-text a{
+.post-list a{
     padding-top: 30px;
     font-size: 18px;
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
-.post-text h4{
+.post-list h4{
     padding-top: 10px;
     font-size: 23px;
 }
 
-.post-text h5{
+.post-list h5{
     padding-top: 10px;
     font-size: 22px;
 }
@@ -620,4 +620,9 @@ footer.post-footer a {
     float: left;
     overflow:hidden;
     display:block;
+}
+
+.reverse {
+    unicode-bidi: bidi-override;
+    direction: rtl;
 }

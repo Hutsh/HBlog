@@ -6,7 +6,7 @@
     <div class="sub-nav">
         <a href="{% url "home" %}" class="nav-active">Home</a>
         <a href="{% url "archives" %}" class="nav-inactive">Archives</a>
-        <a href="#" class="nav-inactive">About</a>
+        <a href="{% url "about" %}" class="nav-inactive">About</a>
         <form class="nav-search" id="sform" action="/search/" method="get">
             <div id="search-btn" class="search-button">
                 <i class="iconfont">&#xe627;</i>

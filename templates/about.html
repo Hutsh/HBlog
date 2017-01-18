@@ -1,0 +1,42 @@
+{% extends "home_base.html" %}
+{% load static %}
+{% load custom_markdown %}
+
+{% block content %}
+
+    <div class="sub-nav">
+        <a href="{% url "home" %}" class="nav-inactive">Home</a>
+        <a href="{% url "archives" %}" class="nav-inactive">Archives</a>
+        <a href="{% url "about" %}" class="nav-active">About</a>
+        <form class="nav-search" id="sform" action="/search/" method="get">
+            <div id="search-btn" class="search-button">
+                <i class="iconfont">&#xe627;</i>
+            </div>
+            <input id="si" type="text" name="s" class="search-input" placeholder="Press Enter to search"/>
+        </form>
+    </div>
+
+    <div class="post-list">
+
+        {{ post_about.content|custom_markdown }}
+        <div class="post-comment-wrap">
+            <!-- 多说评论框 start -->
+                <div class="ds-thread" data-thread-key="{{ post_about.id }}" data-title="{{ post_about.title }}" data-url="{{ post_about.get_absolute_url }}"></div>
+            <!-- 多说评论框 end -->
+            <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+            <script type="text/javascript">
+            var duoshuoQuery = {short_name:"huts"};
+                (function() {
+                    var ds = document.createElement('script');
+                    ds.type = 'text/javascript';ds.async = true;
+                    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                    ds.charset = 'UTF-8';
+                    (document.getElementsByTagName('head')[0]
+                     || document.getElementsByTagName('body')[0]).appendChild(ds);
+                })();
+                </script>
+            <!-- 多说公共JS代码 end -->
+        </div>
+
+    </div>
+{% endblock %}
